@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions" />
+
+    <EditText
+        android:id="@+id/principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/instructions"
+        android:layout_below="@+id/instructions"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/princhint"
+        android:inputType="numberDecimal" >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/princlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/principal"
+        android:layout_below="@+id/principal"
+        android:text="@string/princlabel"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <EditText
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/princlabel"
+        android:layout_below="@+id/princlabel"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/ratehint"
+        android:inputType="numberDecimal" >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/ratelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rate"
+        android:layout_below="@+id/rate"
+        android:text="@string/ratelabel"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratelabel"
+        android:layout_below="@+id/ratelabel"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="@string/termhint"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/termlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/term"
+        android:layout_below="@+id/term"
+        android:text="@string/termlabel"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+    <EditText
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/termlabel"
+        android:layout_below="@+id/termlabel"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/paymentlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/payment"
+        android:layout_below="@+id/payment"
+        android:text="@string/paymentlabel"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/button_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paymentlabel"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/paymentlabel"
+        android:text="@string/button_calc" 
+    	android:onClick="calculate" />
+
+</RelativeLayout>
