@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.util.Log;
 //import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 //import android.view.View.OnTouchListener;
 import android.widget.Button;
@@ -139,5 +140,22 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle presses on the action bar items
+	    switch (item.getItemId()) {
+	        case R.id.action_help:
+	            Toast.makeText(this, "It doesn't matter which you leave empty--that's the one the app will calcualte.", Toast.LENGTH_LONG).show();
+	            return true;
+	        case R.id.action_about:
+	            Toast.makeText(this, "Amortization schedule (as a spreadsheet) will be added in a forthcoming version.", Toast.LENGTH_LONG).show();
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
+	
+	
 
 }
